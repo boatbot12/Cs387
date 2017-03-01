@@ -28,6 +28,20 @@ var server = http.createServer(function(req, res){
       'Content-Length': data.length
     });
     res.end(data);
+  }else if(req.url == '/back3.jpg'){
+    var data = fs.readFileSync("./game_play/back3.jpg");
+    res.writeHead(200, {
+      'Content-Type': 'image/jpg',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  }else if(req.url.match(/\/gif\//)){
+    var data = fs.readFileSync("./game_play"+req.url);
+    res.writeHead(200, {
+      'Content-Type': 'image/gif',
+      'Content-Length': data.length
+    });
+    res.end(data);
   }else {
     var data = "<h1>404 Not found</h1>";
     res.writeHead(404, {
