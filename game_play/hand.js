@@ -63,39 +63,66 @@ function fight(player){
  function moveRight(move){//https://www.tutorialspoint.com/javascript/javascript_animation.htm
 	 var modal = document.getElementById('myModal');
 	 var modal2 = document.getElementById('myModal2');
+	 var re = document.getElementById('reset');
 
 		if(move == 1){
 			if(parseInt(sonic.style.left)<screen.width-500)
+			{
 				sonic.style.left = parseInt(sonic.style.left) + screen.width/9 + 'px';
-				else {
-					sonic.style.left = 0 + 'px';
-					lion.style.left = 0 + 'px';
+				$(document).ready(function() {
+					$("#sonic").animate(sonic.style.left, "slow");
+				});
+			}
 
-					modal.style.display = "block";//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-					window.onclick = function(event)
+			else {
+					sonic.style.left = parseInt(sonic.style.left) + 68 + 'px';
+					modal.style.display = "block";
+					$(document).ready(function(){
+						$(".content").slideDown("slow");
+    				$("#reset").click(function(){
+	        		modal.style.display = "none"
+							sonic.style.left = 0 + 'px';
+							lion.style.left = 0 + 'px';
+    				});
+
+					});
+					/*window.onclick = function(event)//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
 					{
 							if (event.target == modal)
 							{
-									modal.style.display = "none";//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+									modal.style.display = "none";
 							}
-					}
+					}*/
 				}
 		}
 		else if(move == 2){
 			if(parseInt(lion.style.left)<screen.width-500)
+			{
 				lion.style.left = parseInt(lion.style.left) + screen.width/9 + 'px';
+				$(document).ready(function() {
+					$("#lion").animate(lion.style.left, "slow");
+				});
+			}
 				else {
-					lion.style.left = 0 + 'px';
-					sonic.style.left = 0 + 'px';
+					lion.style.left = parseInt(lion.style.left) + 68 + 'px';
+					modal2.style.display = "block";
+					$(document).ready(function(){
+						$(".content").slideDown("slow");
+						$("#reset2").click(function(){
+							modal2.style.display = "none"
+							sonic.style.left = 0 + 'px';
+							lion.style.left = 0 + 'px';
+						});
 
-					modal2.style.display = "block";//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-					window.onclick = function(event)
+					});
+
+					/*window.onclick = function(event)//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
 					{
 							if (event.target == modal2)
 							{
-									modal2.style.display = "none";//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+									modal2.style.display = "none";//js modal  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
 							}
-					}
+					}*/
 				}
 		}
    }

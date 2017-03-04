@@ -32,9 +32,8 @@ section
   padding-bottom: 4%
 }
 
-a
-{
-  margin-left: 38%;
+div:active{
+  transform: translateY(5px);
 }
 
 p{
