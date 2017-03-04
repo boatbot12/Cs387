@@ -1,6 +1,12 @@
-p2,h1
+h1
 {
-	text-align: center
+	text-align: center;
+}
+
+div
+{
+	text-align: center;
+	padding-top: 3%;
 }
 
 th:hover{
@@ -15,11 +21,20 @@ th:active{
   transform: translateY(4px);
 }
 
+.replay:active
+{
+	transform: translateY(4px);
+}
+
+.replay:hover{
+  cursor: pointer;
+}
+
 body
 {
-  background-image: url("jpg/back3.jpg");
+  background-image: url("back3.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100% 100%;
+	background-size: 100% 100% 100%;
   background-size: cover;
 }
 
@@ -32,9 +47,8 @@ section
 
 .modal {
   display: none;
-  position: absolute;
-	text-align: center;
-  padding-top: 8%;
+  position: fixed;
+  padding-top: 0%;
   left: 0;
   top: 0;
   width: 100%;
@@ -42,14 +56,8 @@ section
   background-color: rgba(0,0,0,0.4);
 }
 
-#restart{
-	position: absolute;
-  padding-top: 32%;
-  left: 98vh;
-  top: 0;
-}
-
 .modal-content {
-  margin-left: 38%;
-  width: 10%;
+  margin-left: 0%;
+  width: 100%;
+	height: 100%
 }
