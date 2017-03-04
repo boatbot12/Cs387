@@ -3,9 +3,44 @@ var fs = require("fs") ;
 
 var server = http.createServer(function(req, res){
   if(req.url == '/'){
+    var data = fs.readFileSync("./game_play/home.html");
+    res.writeHead(200, {
+      'Content-Type': 'text/html',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  } else if(req.url == '/game.html'){
     var data = fs.readFileSync("./game_play/game.html");
     res.writeHead(200, {
       'Content-Type': 'text/html',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  } else if(req.url == '/home.css'){
+    var data = fs.readFileSync("./game_play/home.css");
+    res.writeHead(200, {
+      'Content-Type': 'text/css',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  } else if(req.url == '/game.css'){
+    var data = fs.readFileSync("./game_play/game.css");
+    res.writeHead(200, {
+      'Content-Type': 'text/css',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  } else if(req.url == '/game.js'){
+    var data = fs.readFileSync("./game_play/game.js");
+    res.writeHead(200, {
+      'Content-Type': 'application/javascript',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  }  else if(req.url == '/jquery-3.1.1.min.js'){
+    var data = fs.readFileSync("./game_play/jquery-3.1.1.min.js");
+    res.writeHead(200, {
+      'Content-Type': 'application/javascript',
       'Content-Length': data.length
     });
     res.end(data);
@@ -21,7 +56,14 @@ var server = http.createServer(function(req, res){
       'Content-Length': data.length
     });
     res.end(data);
-  } else if(req.url == '/Hw.css'){
+  } else if(req.url.match(/\/jpg\//)){
+    var data = fs.readFileSync("./game_play"+req.url);
+    res.writeHead(200, {
+      'Content-Type': 'image/jpg',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  }else if(req.url == '/Hw.css'){
     var data = fs.readFileSync("./game_play/Hw.css");
     res.writeHead(200, {
       'Content-Type': 'text/css',
