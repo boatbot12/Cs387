@@ -1,3 +1,9 @@
+
+var script = document.createElement('script');
+script.src = 'jquery-3.1.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 function pap()
 {
 	var state = fight(0) ;
@@ -60,81 +66,51 @@ function fight(player){
 	}
 	}
 }
+
  function moveRight(move){//https://www.tutorialspoint.com/javascript/javascript_animation.htm
 	 var modal = document.getElementById('myModal');
 	 var modal2 = document.getElementById('myModal2');
-	 var re = document.getElementById('reset');
 
 		if(move == 1){
-			if(parseInt(sonic.style.left)<screen.width-500)
-			{
-				sonic.style.left = parseInt(sonic.style.left) + screen.width/9 + 'px';
-				$(document).ready(function() {
-					$("#sonic").animate(sonic.style.left, "slow");
-				});
+			if(parseInt(sonic.style.left)<screen.width-500){
+				$(document).ready(function(){
+        $(sonic).animate({left: parseInt(sonic.style.left) + screen.width/9 + 'px'});
+			});
 			}
 
-			else {
-					sonic.style.left = parseInt(sonic.style.left) + 68 + 'px';
-					modal.style.display = "block";
+				else {
 					$(document).ready(function(){
-						$(".content").slideDown("slow");
-    				$("#reset").click(function(){
-	        		modal.style.display = "none"
-							sonic.style.left = 0 + 'px';
-							lion.style.left = 0 + 'px';
-    				});
-
+						$(sonic).animate({left:0 + 'px'});
+						$(lion).animate({left: 0 + 'px'});
+						$(document.getElementById('myModal')).fadeIn("slow","linear");
 					});
-					/*window.onclick = function(event)//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-					{
-							if (event.target == modal)
-							{
-									modal.style.display = "none";
-							}
-					}*/
 				}
 		}
+
 		else if(move == 2){
-			if(parseInt(lion.style.left)<screen.width-500)
-			{
-				lion.style.left = parseInt(lion.style.left) + screen.width/9 + 'px';
-				$(document).ready(function() {
-					$("#lion").animate(lion.style.left, "slow");
-				});
+			if(parseInt(lion.style.left)<screen.width-500){
+				$(document).ready(function(){
+        $(lion).animate({left: parseInt(lion.style.left) + screen.width/9 + 'px'});
+			});
 			}
 				else {
-					lion.style.left = parseInt(lion.style.left) + 68 + 'px';
-					modal2.style.display = "block";
-					$(document).ready(function(){
-						$(".content").slideDown("slow");
-						$("#reset2").click(function(){
-							modal2.style.display = "none"
-							sonic.style.left = 0 + 'px';
-							lion.style.left = 0 + 'px';
-						});
-
+						$(document).ready(function(){
+						$(sonic).animate({left: 0 + 'px'});
+						$(lion).animate({left: 0 + 'px'});
+						$(document.getElementById('myModal2')).fadeIn("slow","linear");
 					});
-
-					/*window.onclick = function(event)//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-					{
-							if (event.target == modal2)
-							{
-									modal2.style.display = "none";//js modal  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-							}
-					}*/
 				}
 		}
    }
 
 	   function run() {//https://www.tutorialspoint.com/javascript/javascript_animation.htm
-	   var sonic,lion2 = null;
-	   sonic = document.getElementById("sonic") ;
+	   var sonic,lion = null;
+	   		sonic = document.getElementById("sonic") ;
 				sonic.style.position= 'relative';
 				sonic.style.left = '0px';
 
-	    	lion2 = document.getElementById("lion") ;
-		    lion2.style.position= 'relative';
-		   	lion2.style.left = '0px';
+	    	lion = document.getElementById("lion") ;
+		    lion.style.position= 'relative';
+		   	lion.style.left = '0px';
 	   }
 	window.onload = run;

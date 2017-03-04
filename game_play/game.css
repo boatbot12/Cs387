@@ -17,7 +17,7 @@ th:active{
 
 body
 {
-  background-image: url("back3.jpg");
+  background-image: url("jpg/back3.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100% 100%;
   background-size: cover;
@@ -32,13 +32,21 @@ section
 
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
+	text-align: center;
   padding-top: 8%;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.4);
+}
+
+#restart{
+	position: absolute;
+  padding-top: 32%;
+  left: 98vh;
+  top: 0;
 }
 
 .modal-content {

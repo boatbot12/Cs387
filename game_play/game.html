@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="Hw.css">
+		<link rel="stylesheet" href="game.css">
+		<script type = "text/javascript" src="jquery-3.1.1.min.js"></script>
+		<script src="game.js"></script>
 		<meta charset="UTF-8">
 		<title>Runner Hand</title>
 	</head>
 
-	<script src="hand.js"></script>
+
 
 	<body>
 		<section>
-			<p><img id="sonic" src ="sonic.gif" width = "270" height="195"></p>
-			<p><img id="lion" src ="kashi.gif" width = "270" height="195"></p>
+			<p><img id="sonic" src ="gif/sonic.gif" width = "270" height="195"></p>
+			<p><img id="lion" src ="gif/kashi.gif" width = "270" height="195"></p>
 		</section>
 
-		<nav>
 			<div id="myModal" class="modal">
   			<div class="modal-content">
-    			<p2><img src="winner.jpg" alt="sonic" width="400" height="350"></p2>
+    			<p1><img src="jpg/winner.jpg" alt="winner" width="400" height="300"></p2>
+					<p1><img id = "restart" src="png/re.png" alt="re" width="140" height="120"></p1>
   			</div>
 			</div>
 
 			<div id="myModal2" class="modal">
   			<div class="modal-content">
-  		 	 <p2><img src="lose.png" alt="lose" width="400" height="350"></p2>
+  		 	 <p2><img id = "lose" src="png/lose.png" alt="lose" width="400" height="300"></p2>
+				 <p2><img id = "restart" src="png/re.png" alt="re" width="140" height="120"></p2>
   			</div>
 			</div>
-		</nav>
 
 		<center>
 			<table style="width:20%">
 				<tr>
-					<th><img id="paper" onclick="pap()" src="kra.png" alt="paper" width="75" height="75"></th>
-					<th><img id="hammer" onclick="ham()" src="kon.png" alt="hammer" width="75" height="75"></th>
-					<th><img id="cutter" onclick="cut()" src="kan.png" alt="cutter" width="75" height="75"></th>
+					<th><img id="paper" onclick="pap()" src="png/kra.png" alt="paper" width="75" height="75"></th>
+					<th><img id="hammer" onclick="ham()" src="png/kon.png" alt="hammer" width="75" height="75"></th>
+					<th><img id="cutter" onclick="cut()" src="png/kan.png" alt="cutter" width="75" height="75"></th>
 				</tr>
 			</table>
 		</center>
-		
+
 		<h1 id="pa"></h1>
 
 	</body>
