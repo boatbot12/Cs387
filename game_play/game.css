@@ -21,6 +21,11 @@ th:active{
   transform: translateY(4px);
 }
 
+.replay
+{
+  padding-top: 0%;
+}
+
 .replay:active
 {
 	transform: translateY(4px);
