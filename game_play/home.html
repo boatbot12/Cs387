@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="home.css">
   </head>
   <body>
+
+    <audio>
+  		<video id="mouse_click" width="320" height="176">
+  		<source src="Sound/mouse_click.mp3" type="video/mp4">
+  	</audio>
+
+    <script>
+    function cc(){
+      document.getElementById('mouse_click').play() ;
+    }
+      </script>
+
   	<h1>RUNNER HAND</h1>
   	<table style="width:100%">
   	<tr>
@@ -22,12 +34,15 @@
   				<p>5) ถ้าผู้เล่น และคอมพิวเตอร์เป่ายิ้งฉุบเสมอกันตัวการ์ตูนไม่วิ่ง แต่ถ้าฝ่ายใดชนะวิ่ง 1 ครั้ง</p>
   				<p>6) เมื่อวิ่งถึงเส้นชัยระบบแสดงูปขึ้นมา ถ้าผู้เล่นชนะขึ้นรูป winner แต่ถ้าแพ้แสดง lose</p>
   				<p>7) ถ้าต้องการเล่นอีกครั้งให้กดพื้นที่ว่างที่ไม่ใช่รูปที่แสดงขึ้นมา 1 ครั้ง</p>
-  				<div><a href="game.html" target="_self"><img src="png/playBut.png" alt="play" width="140" height="90"></div></p>
+  				<div><a href="game.html" target="_self" >
+            <img id = "btn" src="png/playBut.png" onclick="cc()" alt="play" width="140" height="90"></div></p>
   			</section>
+
   		</th>
   		<th>
   			<img src="png/sonic3.png" alt="play" width="400" height="500">
   		</th>
   	</tr>
+
   </body>
 </html>

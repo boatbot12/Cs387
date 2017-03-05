@@ -84,6 +84,7 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 
 		if(move == 1)//ตัวละครผู้เล่่นวิ่ง
 		{
+			document.getElementById('run_sound').play() ;
 			if(parseInt(sonic.style.left)<screen.width-400)
 			{
 				$(document).ready(function()
@@ -94,6 +95,7 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 
 			else
 			{
+				document.getElementById('win_sound').play() ;
 					$(document).ready(function()//เมื่อเล่นจบจะค่อยๆแสดงหน้าจอผลว่าผู้เล่นชนะ
 					{
 						$("#sonic").animate({left: parseInt(sonic.style.left) + 68 + 'px'});
@@ -111,6 +113,7 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 		}
 		else if(move == 2)//ตัวละครคอมวิ่ง
 		{
+			document.getElementById('run_sound').play() ;
 			if(parseInt(lion.style.left)<screen.width-400)
 			{
 				$(document).ready(function()
@@ -120,6 +123,7 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 			}
 				else
 				{
+					document.getElementById('lose_sound').play() ;
 					$(document).ready(function()//เมื่อเล่นจบจะค่อยๆแสดงหน้าจอผลว่าผู้เล่นแพ้
 					{
 						$("#lion").animate({left: parseInt(lion.style.left) + 68 + 'px'});
