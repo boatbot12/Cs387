@@ -10,7 +10,7 @@ h1
 
 body
 {
-  background-image: url("backhome.jpg");
+  background-image: url("jpg/backhome.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100% 100% 100%;
@@ -18,7 +18,7 @@ body
 
 section
 {
-  background-image: url("gray.jpg");
+  background-image: url("jpg/gray.jpg");
   /*background-color: rgb(144,231,238);*/
   font-family: "Times New Roman";
   font-size: 16px;
@@ -32,12 +32,14 @@ section
   padding-bottom: 4%
 }
 
-div:active{
-  transform: translateY(5px);
+#bth_play:active
+{
+  transform: translateY(4px);
 }
 
-div:hover{
-  cursor: pointer;
+a
+{
+  margin-left: 38%;
 }
 
 p{
