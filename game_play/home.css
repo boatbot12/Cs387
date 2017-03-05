@@ -32,14 +32,12 @@ section
   padding-bottom: 4%
 }
 
-#bth_play:active
-{
-  transform: translateY(4px);
+div:active{
+  transform: translateY(5px);
 }
 
-a
-{
-  margin-left: 38%;
+div:hover{
+  cursor: pointer;
 }
 
 p{
