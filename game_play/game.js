@@ -100,7 +100,6 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 					{
 						$("#sonic").animate({left: parseInt(sonic.style.left) + 68 + 'px'});
 						$(document.getElementById('myModal')).fadeIn("slow","linear");
-						document.getElementById("status").innerHTML = "END  PLAYER  WIN";
     				$("#reset").click(function()//ทำการเริ่มเล่นเกมใหม่ตัวละครกลับไปที่จุดเริ่มต้น
 						{
 	        		modal.style.display = "none"
@@ -128,7 +127,6 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 					{
 						$("#lion").animate({left: parseInt(lion.style.left) + 68 + 'px'});
 						$(document.getElementById('myModal2')).fadeIn("slow","linear");
-						document.getElementById("status").innerHTML = "END  COM  WIN";
 						$("#reset2").click(function()//ทำการเริ่มเล่นเกมใหม่ตัวละครกลับไปที่จุดเริ่มต้น
 						{
 							modal2.style.display = "none"

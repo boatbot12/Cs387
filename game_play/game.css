@@ -1,41 +1,41 @@
-h1
+h1/*กำหนดตำแหน่งตัวบอกสถานะ*/
 {
 	text-align: center;
 }
 
-div
+div/*กำหนดตำแหน่งของรูปภาพ*/
 {
 	text-align: center;
 	padding-top: 3%;
 }
 
-th:hover{
+th:hover/*เปลี่ยนรูปแบบเมาเมื่อคลิกปุ่ม*/{
   cursor: pointer;
 }
 
-#sonic,#lion:hover{
+#sonic,#lion:hover{/*ไม่ให้เมาส์กดที่รูปตัวละคร*/
   cursor:not-allowed;
 }
 
-th:active{
+th:active{/*ให้ปุ่มมีเอฟเฟค*/
   transform: translateY(4px);
 }
 
-.replay
+.replay/*ให้ปุ่มreplayห่างจากด้านบน*/
 {
   padding-top: 0%;
 }
 
-.replay:active
+.replay:active/*เปลี่ยนรูปแบบเมาเมื่อคลิกปุ่ม*/
 {
 	transform: translateY(4px);
 }
 
-.replay:hover{
+.replay:hover{/*ให้ปุ่มมีเอฟเฟค*/
   cursor: pointer;
 }
 
-body
+body/*กำหนดพื้นหลัง*/
 {
   background-image: url("jpg/back3.jpg");
   background-repeat: no-repeat;
@@ -43,14 +43,13 @@ body
   background-size: cover;
 }
 
-section
+section/*กำหนดตำแหน่งของตัวละคร*/
 {
-  /*margin-top: 150px;*/
   padding-top: 115px;
   padding-bottom: 13px;
 }
 
-.modal {
+.modal {/*กำหนดพื้นหลังหลังเล่นเกมจบ*/
   display: none;
   position: fixed;
   padding-top: 0%;
@@ -61,7 +60,7 @@ section
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
+.modal-content {/*กำหนดตำแหน่งและขนาดรูปหลังเล่นเกมจบ*/
   margin-left: 0%;
   width: 100%;
 	height: 100%

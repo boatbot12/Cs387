@@ -1,4 +1,4 @@
-h1
+h1/*กำหนดขขนาด้อความของheader*/
 {
   font-family: serif;
   font-size: 60px;
@@ -8,7 +8,7 @@ h1
   margin-left: 35%;
 }
 
-body
+body/*กำหนดพื้นหลัง*/
 {
   background-image: url("jpg/backhome.jpg");
   background-size: cover;
@@ -16,10 +16,9 @@ body
   background-size: 100% 100% 100%;
 }
 
-section
+section/*กำหนดขนาดตัวอักษร*/
 {
   background-image: url("jpg/gray.jpg");
-  /*background-color: rgb(144,231,238);*/
   font-family: "Times New Roman";
   font-size: 16px;
   opacity:0.88;
@@ -32,14 +31,14 @@ section
   padding-bottom: 4%
 }
 
-div:active{
+div:active{/*กำหนดเอฟเฟคปุ่ม*/
   transform: translateY(5px);
 }
 
-div:hover{
+div:hover{/*กำหนดรูปแบบเม้าส์*/
   cursor: pointer;
 }
 
-p{
+p{/*กำหนดฝั่งตัวอักษร*/
   text-align: left;
 }
