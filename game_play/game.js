@@ -23,17 +23,17 @@ function fight(player)//เมื่อกดปุ่ม ค้อน กรร
 	{
 		if(ran == 0)//draw คอมออกกระดาษ
 		{
-			document.getElementById("status").innerHTML = "player : paper  &&  com : paper --> DRAW";
+			document.getElementById("status").innerHTML = "PLAYER : PAPER" + space() + "COM : PAPER";
 			return 0 ;
 		}
 		else if(ran == 1)//win คอมออกค้อน
 		{
-			document.getElementById("status").innerHTML = "player : paper  &&  com : hammer --> player WIN";
+			document.getElementById("status").innerHTML = "PLAYER : PAPER" + space() + "COM : HAMMER";
 			return 1 ;
 		}
 		else if(ran == 2)//lose คอมออกกรรไกร
 		{
-			document.getElementById("status").innerHTML = "player : paper  &&  com : cutter --> player LOSE";
+			document.getElementById("status").innerHTML = "PLAYER : PAPER" + space() + "COM : CUTTER";
 			return 2 ;
 		}
 	}
@@ -42,17 +42,17 @@ function fight(player)//เมื่อกดปุ่ม ค้อน กรร
 	{
 		if(ran == 0)//lose คอมออกกระดาษ
 		{
-			document.getElementById("status").innerHTML = "player : hammer  &&  com : paper --> player LOSE";
+			document.getElementById("status").innerHTML = "PLAYER : HAMMER" + space() + "COM : PAPER";
 			return 2 ;
 		}
 		else if(ran == 1)//draw คอมออกค้อน
 		{
-			document.getElementById("status").innerHTML = "player : hammer  &&  com : hammer --> DRAW";
+			document.getElementById("status").innerHTML = "PLAYER : HAMMER" + space() + "COM : HAMMER";
 			return 0 ;
 		}
 		else if(ran == 2)//win คอมออกกรรไกร
 		{
-			document.getElementById("status").innerHTML = "player : hammer  &&  com : cutter --> player WIN";
+			document.getElementById("status").innerHTML = "PLAYER : HAMMER" + space() + "COM : CUTTER";
 			return 1 ;
 		}
 	}
@@ -61,17 +61,17 @@ function fight(player)//เมื่อกดปุ่ม ค้อน กรร
 	{
 		if(ran == 0)//win คอมออกกระดาษ
 		{
-			document.getElementById("status").innerHTML = "player : cutter  &&  com : paper --> player WIN";
+			document.getElementById("status").innerHTML = "PLAYER : CUTTER" + space() + "COM : PAPER";
 			return 1 ;
 		}
 		else if(ran == 1)//lose คอมออกค้อน
 		{
-			document.getElementById("status").innerHTML = "player : cutter  &&  com : hammer --> player LOSE";
+			document.getElementById("status").innerHTML = "PLAYER : CUTTER" + space() + "COM : HAMMER";
 			return 2 ;
 		}
 		else if(ran == 2)//draw คอมออกกรรไกร
 		{
-			document.getElementById("status").innerHTML = "player : cutter  &&  com : cutter --> DRAW";
+			document.getElementById("status").innerHTML = "PLAYER : CUTTER" +  space() + "COM : CUTTER";
 			return 0 ;
 		}
 	}
@@ -100,7 +100,7 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 					{
 						$("#sonic").animate({left: parseInt(sonic.style.left) + 68 + 'px'});
 						$(document.getElementById('myModal')).fadeIn("slow","linear");
-						document.getElementById("status").innerHTML = "END PLAYER WIN";
+						document.getElementById("status").innerHTML = "END  PLAYER  WIN";
     				$("#reset").click(function()//ทำการเริ่มเล่นเกมใหม่ตัวละครกลับไปที่จุดเริ่มต้น
 						{
 	        		modal.style.display = "none"
@@ -128,7 +128,7 @@ function moveRight(move)// เมื่อตัวละครวิ่ง http
 					{
 						$("#lion").animate({left: parseInt(lion.style.left) + 68 + 'px'});
 						$(document.getElementById('myModal2')).fadeIn("slow","linear");
-						document.getElementById("status").innerHTML = "END COM WIN";
+						document.getElementById("status").innerHTML = "END  COM  WIN";
 						$("#reset2").click(function()//ทำการเริ่มเล่นเกมใหม่ตัวละครกลับไปที่จุดเริ่มต้น
 						{
 							modal2.style.display = "none"
@@ -153,3 +153,11 @@ function run() //กำหนดตำแหน่งเริ่มก่อน
 		lion.style.left = '0px';
 }
 window.onload = run;
+
+function space() //เว้นวรรคข้อความ
+{
+	var s = "";
+	for(var i=0;i<30;i++)
+		s = s + "\u00a0";
+	return s;
+}
