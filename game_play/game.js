@@ -33,7 +33,7 @@ function fight(player)//เมื่อกดปุ่ม ค้อน กรร
 		}
 		else if(ran == 2)//lose คอมออกกรรไกร
 		{
-			document.getElementById("status").innerHTML = "PLAYER : PAPER" + space() + "COM : CUTTER";
+			document.getElementById("status").innerHTML = "PLAYER : PAPER" + space() + "COM : SCISSORS";
 			return 2 ;
 		}
 	}
@@ -52,7 +52,7 @@ function fight(player)//เมื่อกดปุ่ม ค้อน กรร
 		}
 		else if(ran == 2)//win คอมออกกรรไกร
 		{
-			document.getElementById("status").innerHTML = "PLAYER : HAMMER" + space() + "COM : CUTTER";
+			document.getElementById("status").innerHTML = "PLAYER : HAMMER" + space() + "COM : SCISSORS";
 			return 1 ;
 		}
 	}
@@ -61,17 +61,17 @@ function fight(player)//เมื่อกดปุ่ม ค้อน กรร
 	{
 		if(ran == 0)//win คอมออกกระดาษ
 		{
-			document.getElementById("status").innerHTML = "PLAYER : CUTTER" + space() + "COM : PAPER";
+			document.getElementById("status").innerHTML = "PLAYER : SCISSORS" + space() + "COM : PAPER";
 			return 1 ;
 		}
 		else if(ran == 1)//lose คอมออกค้อน
 		{
-			document.getElementById("status").innerHTML = "PLAYER : CUTTER" + space() + "COM : HAMMER";
+			document.getElementById("status").innerHTML = "PLAYER : SCISSORS" + space() + "COM : HAMMER";
 			return 2 ;
 		}
 		else if(ran == 2)//draw คอมออกกรรไกร
 		{
-			document.getElementById("status").innerHTML = "PLAYER : CUTTER" +  space() + "COM : CUTTER";
+			document.getElementById("status").innerHTML = "PLAYER : SCISSORS" +  space() + "COM : SCISSORS";
 			return 0 ;
 		}
 	}
