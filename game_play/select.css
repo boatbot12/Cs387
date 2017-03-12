@@ -1,0 +1,30 @@
+body
+{
+  background-image: url("jpg/back4.jpg");
+  background-size: cover;
+}
+
+h1
+{
+  text-align: center;
+  padding-top: 1.5%;
+  font-family: serif;
+  font-size: 58px;
+  color : #000000;
+  text-shadow: 4px 4px 20px #595959;
+  font-weight: bold;
+}
+
+th,td
+{
+  text-align: center;
+  padding-top: 2%;
+}
+
+th:active{
+  transform: translateY(5px);
+}
+
+th:hover{
+  cursor: pointer;
+}

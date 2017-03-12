@@ -53,6 +53,16 @@ var server = http.createServer(function(req, res)
     res.end(data);
   }
 
+  else if(req.url == '/select.js')
+  {
+    var data = fs.readFileSync("./game_play/select.js");
+    res.writeHead(200, {
+      'Content-Type': 'application/javascript',
+      'Content-Length': data.length
+    });
+    res.end(data);
+  }
+
   else if(req.url == '/jquery-3.1.1.min.js')
   {
     var data = fs.readFileSync("./game_play/jquery-3.1.1.min.js");
